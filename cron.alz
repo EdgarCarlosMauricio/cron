@@ -1,0 +1,125 @@
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+##00 03 * * * sh /var/www/html/apiR/verificar_estado_servicio.sh
+##04 04 * * * sh /var/www/html/apiR/da_nuevos_reg.sh
+##30 04 * * * sh /var/www/html/apiR/da_actualiza_reg.sh
+##03 03 * * * sh /var/www/html/apiR/fechas_backups.sh
+##00 05 * * * sh /var/www/html/api_R/k/t_crk_1_1.sh
+#00 04 * * * sh /var/www/html/api_R/k/t_crk_1_1.sh
+#10 04 * * * sh /var/www/html/api_R/k/t_crk_1_2.sh
+#Informe Diario SOAT-SE
+20 04 * * * sh /var/www/html/api_R/r/t_crr_1_1.sh
+25 04 * * * sh /var/www/html/api_R/r/t_crr_1_2.sh
+55 07 * * * sh /var/www/html/api_R/r/t_crr_1_3.sh
+#35 04 * * * sh /var/www/html/api_R/k/t_crk_4_1.sh
+#40 04 * * * sh /var/www/html/api_R/k/t_crk_4_2.sh
+#45 04 * * * sh /var/www/html/api_R/k/t_crk_3_1.sh
+50 03 * * * sh /var/www/html/api_R/d/t_crd_1_1.sh
+#48 03 * * * sh /var/www/html/api_R/d/t_crd_3_1.sh
+45 03 * * * sh /var/www/html/api_R/k/t_crk_2_1.sh
+#58 03 * * * sh /var/www/html/api_R/k/test_cvs.sh
+#30 03 * * * sh /var/www/html/api_R/r/t_crr_3_1.sh
+
+
+#Ambulancias
+11 */2 * * * sh /var/www/html/api_R/d/t_crd_1_1.sh
+50 02 * * * sh /var/www/html/api_R/d/t_crd_1_2.sh
+
+52 03 * * * sh /var/www/html/api_R/m/t_crm_1_1.sh
+#51 03 * * * sh /var/www/html/api_R/m/t_crm_3_1.sh
+53 03 * * * sh /var/www/html/api_R/m/t_crm_1_2.sh
+#54 03 * * * sh /var/www/html/api_R/m/t_crm_3_2.sh
+55 03 * * * sh /var/www/html/api_R/m/t_crm_1_3.sh
+#56 03 * * * sh /var/www/html/api_R/m/t_crm_3_3.sh
+00 03 * * * sh /var/www/html/api_R/m/t_crm_1_4.sh
+0 4,13 * * * sh /var/www/html/api_py/d/t_crd_1_1.sh
+#Alertamiento SOAT-SE
+* 06 * * * sh /var/www/html/api_R/t/t_crt_1_1.sh
+03 04 * * * sh /var/www/html/api_R/t/t_crt_1_2.sh
+10 04 * * * sh /var/www/html/api_R/t/t_crt_1_3.sh
+05 04 * * * sh /var/www/html/api_R/t/t_crt_1_4.sh
+00 */2 * * * sh /var/www/html/api_R/t/t_crt_1_5.sh
+01 */2 * * * sh /var/www/html/api_R/t/t_crt_2_5.sh
+20 04 * * * sh /var/www/html/api_R/t/t_crt_1_6.sh
+25 04 * * * sh /var/www/html/api_R/t/t_crt_1_7.sh
+30 04 * * * sh /var/www/html/api_R/t/t_crt_1_8.sh
+35 04 * * * sh /var/www/html/api_R/t/t_crt_1_9.sh
+40 04 * * * sh /var/www/html/api_R/t/t_crt_1_10.sh
+45 04 * * * sh /var/www/html/api_R/t/t_crt_1_11.sh
+50 04 * * * sh /var/www/html/api_R/t/t_crt_1_12.sh
+55 04 * * * sh /var/www/html/api_R/t/t_crt_1_13.sh
+00 05 * * * sh /var/www/html/api_R/t/t_crt_1_14.sh
+05 05 * * * sh /var/www/html/api_R/t/t_crt_1_15.sh
+10 05 * * * sh /var/www/html/api_R/t/t_crt_1_16.sh
+15 05 * * * sh /var/www/html/api_R/t/t_crt_1_17.sh
+20 05 * * * sh /var/www/html/api_R/t/t_crt_1_18.sh
+22 05 * * * sh /var/www/html/api_R/t/t_crt_1_20.sh
+24 05 * * * sh /var/www/html/api_R/t/t_crt_1_21.sh
+38 */2 * * * sh /var/www/html/api_R/t/t_crt_2_2.sh
+05 * * * * sh /var/www/html/api_R/t/t_crt_2_1.sh
+50 03 * * * sh /var/www/html/api_R/t/t_crt_4_1.sh
+45 * * * * sh /var/www/html/api_R/t/t_crt_4_3.sh
+56 05 * * * sh /var/www/html/api_R/t/t_crt_2_3.sh
+59 05 * * * sh /var/www/html/api_R/t/t_crt_2_19.sh 
+11 * * * * sh /var/www/html/api_R/t/t_crt_1_1b.sh
+0 * * * * sh /var/www/html/api_R/t/t_crt_1_1c.sh
+*/30 * * * * sh /var/www/html/api_R/t/t_crt_4_6.sh
+10 * * * * sh /var/www/html/api_R/t/t_crt_4_5.sh
+#50 05 01 * * sh /var/www/html/api_R/k/t_crk_1_3.sh
+#51 05 01 * * sh /var/www/html/api_R/k/t_crk_2_3.sh 
+#52 05 01 * * sh /var/www/html/api_R/k/t_crk_1_4.sh
+#55 05 01 * * sh /var/www/html/api_R/k/t_crk_2_4.sh
+#40 05 01 * * sh /var/www/html/api_R/k/t_crk_1_5.sh
+#41 05 01 * * sh /var/www/html/api_R/k/t_crk_1_6.sh
+#42 05 01 * * sh /var/www/html/api_R/k/t_crk_2_5.sh
+#43 05 01 * * sh /var/www/html/api_R/k/t_crk_2_6.sh
+#DataMAOS > Proveedores-Levenshtein
+* * * * * sh /var/www/html/api_py/m/t_crm_1_1.sh
+#Alertamiento APE-SE
+* * * * * sh /var/www/html/api_R/t/t_crt_11_1.sh
+03 04 * * * sh /var/www/html/api_R/t/t_crt_11_2.sh
+05 04 * * * sh /var/www/html/api_R/t/t_crt_11_4.sh
+11 * * * * sh /var/www/html/api_R/t/t_crt_11_1b.sh
+20 04 * * * sh /var/www/html/api_R/t/t_crt_11_6.sh
+25 04 * * * sh /var/www/html/api_R/t/t_crt_11_7.sh
+42 04 * * * sh /var/www/html/api_R/t/t_crt_11_10.sh
+45 04 * * * sh /var/www/html/api_R/t/t_crt_11_11.sh
+48 04 * * * sh /var/www/html/api_R/t/t_crt_11_12.sh
+55 04 * * * sh /var/www/html/api_R/t/t_crt_11_13.sh
+56 04 * * * sh /var/www/html/api_R/t/t_crt_11_14.sh
+57 04 * * * sh /var/www/html/api_R/t/t_crt_11_19.sh
+59 04 * * * sh /var/www/html/api_R/t/t_crt_11_20.sh
+01 05 * * * sh /var/www/html/api_R/t/t_crt_11_21.sh
+03 05 * * * sh /var/www/html/api_R/t/t_crt_11_22.sh
+05 05 * * * sh /var/www/html/api_R/t/t_crt_11_23.sh
+08 05 * * * sh /var/www/html/api_R/t/t_crt_11_24.sh
+11 05 * * * sh /var/www/html/api_R/t/t_crt_11_25.sh
+38 */2 * * * sh /var/www/html/api_R/t/t_crt_12_2.sh
+05 * * * * sh /var/www/html/api_R/t/t_crt_12_1.sh
+50 03 * * * sh /var/www/html/api_R/t/t_crt_14_1.sh
+45 * * * * sh /var/www/html/api_R/t/t_crt_14_3.sh
+30 06 * * * sh /var/www/html/api_R/t/t_crt_12_3.sh
+59 05 * * * sh /var/www/html/api_R/t/t_crt_12_19a.sh
+10 * * * * sh /var/www/html/api_R/t/t_crt_14_5.sh
+*/30 * * * * sh /var/www/html/api_R/t/t_crt_14_6.sh
+35 06 * * * sh /var/www/html/api_R/t/t_crt_11_1c.sh

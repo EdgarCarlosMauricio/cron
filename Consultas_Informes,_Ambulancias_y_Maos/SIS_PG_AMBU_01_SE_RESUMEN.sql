@@ -1,0 +1,6 @@
+SELECT B.nombres[1]||' '||B.nombres[2] AS nombres, B.apellidos[1]||' '||B.apellidos[2] AS apellidos, A.fecha_registro::date, count(*) FROM ambulancia_sch.ambu_soat_se_siniestro_alt A INNER JOIN usuario_sis B ON A.id_usuario=B.id_usuario WHERE A.estado=0 AND A.fecha_registro>'2021-05-01' AND A.fecha_registro< current_date - extract(dow from current_date)::integer GROUP BY A.id_usuario, nombres, apellidos, A.fecha_registro::date
+
+
+--SELECT B.nombres[1]||' '||B.nombres[2] AS nombres, B.apellidos[1]||' '||B.apellidos[2] AS apellidos, A.fecha_registro::date, count(*) FROM ambulancia_sch.ambu_soat_se_siniestro_alt A INNER JOIN usuario_sis B ON A.id_usuario=B.id_usuario WHERE A.estado=0 AND A.fecha_registro>'2021-05-01' AND A.fecha_registro<'2021-12-05' GROUP BY A.id_usuario, nombres, apellidos, A.fecha_registro::date
+
+--SELECT B.nombres[1]||' '||B.nombres[2] AS nombres, B.apellidos[1]||' '||B.apellidos[2] AS apellidos, A.fecha_registro::date, count(*) FROM ambulancia_sch.ambu_soat_se_siniestro_alt A INNER JOIN usuario_sis B ON A.id_usuario=B.id_usuario WHERE A.estado=0 AND A.fecha_registro>'2021-11-18' AND A.fecha_registro<'2021-11-19' GROUP BY A.id_usuario, nombres, apellidos, A.fecha_registro::date

@@ -1,0 +1,5 @@
+SELECT B.nombres[1]||' '||B.nombres[2]||' '||B.apellidos[1]||' '||B.apellidos[2] AS Nombres, count(*) AS Traslados_primarios FROM ambulancia_sch.ambu_soat_se_siniestro_alt A INNER JOIN usuario_sis B ON A.id_usuario=B.id_usuario WHERE A.estado=0 AND A.fecha_registro>='2021-11-01' AND A.fecha_registro<'2021-12-01' GROUP BY B.nombres[1]||' '||B.nombres[2]||' '||B.apellidos[1]||' '||B.apellidos[2] ORDER BY Traslados_primarios desc
+
+--SELECT B.nombres[1]||' '||B.nombres[2]||' '||B.apellidos[1]||' '||B.apellidos[2] AS nombres, B.correo, count(*) AS traslado_primario FROM ambulancia_sch.ambu_soat_se_siniestro_alt A INNER JOIN usuario_sis B ON A.id_usuario=B.id_usuario WHERE A.estado=0 AND A.fecha_registro>='2021-09-01' AND A.fecha_registro<'2021-10-01' GROUP BY B.nombres[1]||' '||B.nombres[2]||' '||B.apellidos[1]||' '||B.apellidos[2], B.correo ORDER BY traslado_primario DESC
+
+SELECT A.fecha_registro::date, count(*) FROM ambulancia_sch.ambu_soat_se_siniestro_alt A WHERE A.fecha_registro>'2021-09-01' AND A.fecha_registro<'2021-10-01' GROUP BY A.fecha_registro::date

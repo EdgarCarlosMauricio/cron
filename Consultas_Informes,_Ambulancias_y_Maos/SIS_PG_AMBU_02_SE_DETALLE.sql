@@ -1,0 +1,3 @@
+SELECT B.nombres[1]||' '||B.nombres[2] AS nombres, B.apellidos[1]||' '||B.apellidos[2] AS apellidos, A.fecha_registro::date AS fecha, A.fecha_registro::time as hora FROM ambulancia_sch.ambu_soat_se_siniestro_alt A INNER JOIN usuario_sis B ON A.id_usuario=B.id_usuario WHERE A.estado=0 AND A.fecha_registro>='2021-05-01' AND A.fecha_registro<current_date - extract(dow from current_date)::integer
+
+--SELECT B.nombres[1]||' '||B.nombres[2] AS nombres, B.apellidos[1]||' '||B.apellidos[2] AS apellidos, A.fecha_registro::date AS fecha, A.fecha_registro::time as hora FROM ambulancia_sch.ambu_soat_se_siniestro_alt A INNER JOIN usuario_sis B ON A.id_usuario=B.id_usuario WHERE A.estado=0 AND A.fecha_registro>='2021-05-01' AND A.fecha_registro<'2021-11-21'

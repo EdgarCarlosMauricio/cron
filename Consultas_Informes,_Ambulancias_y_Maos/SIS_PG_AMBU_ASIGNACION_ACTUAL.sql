@@ -1,0 +1,3 @@
+SELECT A.id_usuario_asignado, B.nombres[1]||' '||B.nombres[2] AS nombres, B.apellidos[1]||' '||B.apellidos[2] AS apellidos, B.correo, count(*) 
+FROM ambulancia_sch.ambu_soat_se_siniestro_alt_asig A INNER JOIN usuario_sis B ON A.id_usuario_asignado=B.id_usuario 
+WHERE (A.a_siniestro, A.nro_siniestro, A.nro_cuenta) IN (SELECT a_siniestro, nro_siniestro, nro_cuenta FROM ambulancia_sch.ambu_soat_se_siniestro_alt WHERE estado=1) GROUP BY A.id_usuario_asignado, B.nombres[1]||' '||B.nombres[2], B.apellidos[1]||' '||B.apellidos[2], B.correo ORDER BY id_usuario_asignado ASC

@@ -1,0 +1,1 @@
+SELECT count(*) FROM ambulancia_sch.ambu_soat_se_siniestro_alt WHERE estado=1 AND (a_siniestro, nro_siniestro, nro_cuenta) NOT IN (SELECT a_siniestro, nro_siniestro, nro_cuenta FROM ambulancia_sch.ambu_soat_se_siniestro_alt_asig);
