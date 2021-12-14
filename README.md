@@ -37,3 +37,23 @@
 ### se ejecuta el script: /home/user/test.pl cada 5 minutos.
 */5 * * * *  /home/user/test.pl
 
+
+
+
+# ETL in R, 
+- primero debe instalar R devtoolscon install.packages('devtools')
+- luego instalamos los dependencias
+-- install.packages("RPostgres")
+
+--- DBI de R que proporciona un métodos que permite conectarse a bases de datos SQL
+## Enlaces de documentacion encontrados
+- https://cran.r-project.org/web/packages/etl/vignettes/using_etl.html
+- https://github.com/beanumber/etl
+
+
+- https://www.datacareer.de/blog/connect-to-postgresql-with-r-a-step-by-step-example/
+
+- https://www.compose.com/articles/connecting-r-and-compose-postgresql/
+- https://github.com/r-dbi/RPostgres
+
+
